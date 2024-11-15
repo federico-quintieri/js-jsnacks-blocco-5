@@ -22,13 +22,9 @@ const students = [
 // Recupera la classe dello studente 'Marco Lanci'
 // Risultato: '3C'
 
-let classe = null;
-
-students.forEach((curElement, curIndex) => {
-  const { class: studentClass } = curElement;
-  console.log(studentClass);
-
-  classe = studentClass == "3C" ? studentClass : "";
+const classeMarco = students.find((curElement, curIndex) => {
+  const classe = curElement.class;
+  return classe === "3C";
 });
 
-console.log(classe);
+console.log(classeMarco.class);
